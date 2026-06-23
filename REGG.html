@@ -1,0 +1,95 @@
+
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	     <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
+	     <style type="text/css">
+	     	.form-control{ background-color:#aaa; border:none }
+	     </style>
+	
+</head>
+<body>
+	
+	
+	   <div style="background-image: url('https://gifdb.com/images/high/black-background-dark-wings-cl0wj65d1d3ptxny.gif'); background-size: cover; ">
+		<div >
+
+			<div class="container text-white pt-5 pb-5">
+		<div class="row" >
+			<div class="col-3"></div>
+			<div class="col-6 text-light p-5" style="background-color: rgba(0, 0, 0, 0.50);" ><form method="POST"  method=""><h1 class="text-warning">Registration form</h1>
+				{% csrf_token %}
+				<div class="row">
+					<div class="col-md-6" >
+						<label>Username</label>
+
+				<input type="text" class="form-control" name="nm" required><br>
+					</div>
+					<div class="col-md-6">
+						<label>email</label>
+		        <input type="email" class="form-control" name="em" required><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6" >
+				
+		        				<label>first_name</label>
+		        <input type="text" class="form-control" name="nmf"  required><br></div>
+		        <div class="col-md-6" >
+		        				<label>address</label>
+		        <input type="text" class="form-control" name="ad" required><br></div></div>
+		        <div class="row">
+					<div class="col-md-6" >
+		        				<label>last_name</label>
+		        <input type="text" class="form-control" name="nml" required><br></div>
+		        <div class="col-md-6" >
+		        				<label>date_of_birth</label>			
+		        <input type="date" class="form-control" name="db" required><br></div></div>
+		        <div class="row">
+					<div class="col-md-6" >
+		        				<label>password</label>
+		        <input type="password" class="form-control" name="pw" required><br></div>
+		        <div class="col-md-6" >
+		        				<label>phone_number</label>
+		        <input type="digit" class="form-control" name="pnn" required><br>	</div></div>
+		        <div class="row">
+					<div class="col-md-6" >			
+		        <label>image</label>
+		        <input type="file" class="form-control"  name="f" required>	<br>	</div>
+		        <div class="col-md-6" >		
+		        <label name="gn">gender</label><br/>
+		        <input type="radio"  name="male" >Male 
+		        
+		        <input type="radio"  name="female" > Female<br><br></div></div>
+		        <div class="row">
+					<div class="col-md-12" >	
+		        <textarea name=" msg" class="form-control bg-body-secacdary" rows="3"> your opinion about movie</textarea><br></div>
+		        </div>
+		        				
+		        <button type="submit" class="bg-warning" value="submit" name="submit">submit</button><br></div></div>
+		     
+		    </form></div>
+		    <div class="col-3"></div></div></div></div></div>
+{% if msg %}
+    <script type ="text/javascript">
+	   alert("{{msg}}")
+	 </script>
+{%  endif  %}
+
+
+
+		    
+		    
+		    
+		    
+
+
+{% include 'footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="text-dark text-center">
+	<img src="{% static 'qr_codes/logo.png' %}" height="150px" width="150px">
+	<h2> scan the QR code to pay</h2>
+	<h1>{{name}}</h1>
+	<hr>
+	<h6>UPI:-{{upi_id}}</h6>
+
+	<img src="{%  static 'images/new_upi.png'  %}" alt="UPI QR Code" height="400px" width="400px">
+</div>
+<button><a href="{% url 'booked' %}">payment done </button>
+{% endblock %}
+
+

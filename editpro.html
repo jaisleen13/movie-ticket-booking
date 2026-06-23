@@ -1,0 +1,47 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+
+
+<div class="row">
+	<div class="col-3"></div>
+	<div class="col-6 bg-info-subtle shadow p-5">
+		<h1 class="text-danger">Edit profile</h1><hr>
+		<hr>
+		<form method="POST" action="">
+			{% csrf_token %}
+			
+			<label>First Name</label><input type="text" class="form-control" name="pi" value="{{user.first_name}}" ><br>
+			<label>Last Name</label><input type="text" class="form-control" name="ad" value="{{user.last_name}}" ><br>
+			<label>gender</label><input type="text" class="form-control" name="c" value="{{user.gender}}" ><br>
+			<label>fathername</label><input type="text" class="form-control" name="nmf" value="{{user.fathername}}"><br>
+			<label>mothername</label><input type="text" class="form-control" name="nmm" value="{{user.mothername}}"><br>
+			<label>username</label><input type="text" class="form-control" name="nm" value="{{user.username}}"><br>
+			<label>date</label><input type="date" class="form-control" name="db" value="{{user.DOB}}" ><br>
+			<button type="submit" class="btn btn-danger">submit data </button><br>
+
+
+
+
+
+
+
+
+		</form>
+			
+		
+
+
+
+
+
+
+</div>
+	<div class="col-3"></div>
+</div>
+{% if msg %}
+    <script type ="text/javascript">
+	   alert("{{msg}}")
+	 </script>
+{%  endif  %}
+
+{% endblock %}

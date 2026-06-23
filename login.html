@@ -1,0 +1,77 @@
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	     <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
+	     <style type="text/css">
+	     	.form-control{ background-color:#aaa; border:none }
+	     </style>
+	
+</head>
+<body>
+	
+	
+	   <div style="background-image: url('https://gifdb.com/images/high/black-background-dark-wings-cl0wj65d1d3ptxny.gif'); background-size: cover; ">
+		
+
+			<div class="container text-white pt-5 pb-5">
+		<div class="row" >
+			<div class="col-3"></div>
+			<div class="col-6 text-light p-5" style="background-color: rgba(0, 0, 0, 0.50);" >
+
+				<form method="POST" action=""><h1 class="text-warning">login form</h1>
+				{% csrf_token %}
+				<label>Email Id</label>
+
+				<input type="email" class="form-control" name="em" required><br>
+
+
+				<label>password</label>
+		        <input type="password" class="form-control" name="pw" required><br>
+		        
+
+		          <p>create new account ! Click Here</p>
+
+
+
+
+
+
+
+		        <br>
+
+
+
+
+
+
+
+
+
+
+
+		        <input type="submit" class="btn btn-warning rounded-pill" value="submit" name="submit"><br></div>
+		     
+		    </form></div>
+		    <div class="col-3"></div></div></div></div>
+
+		    
+{% if msg %}
+<script type ="text/javascript">
+	alert("{{msg}}")
+</script>
+{%  endif  %}
+
+	    
+		    
+		    
+
+
+{% include 'footer.html' %}
+
+</body>
+</html>

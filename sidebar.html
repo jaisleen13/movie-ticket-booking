@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'icofont/icofont.min.css' %}">
+    <style>
+    	ul li a{text-decoration:none;color:black;font-size:25px}
+    	ul li a:hover{color:seagreen;}
+
+   </style>
+</head>
+<body>
+<div class="row">
+	<div class="col-3 bg-secondary-subtle" style="height:800px">
+		<center>
+			<img src='https://cdn-icons-png.flaticon.com/512/4715/4715330.png' width="50%">
+		</center>
+<ul type="none">
+	<li><a href="{% url 'index' %}"><i class="icofont-home p-2"></i>Home</a></li><hr>
+	<li><a href="{% url 'myprofile' %}"><i class="icofont-native-american p-2"></i>Myprofile</a></li><hr>
+	<li><a href="{% url 'editpro' %}"><i class="icofont-robot-face p-2"></i>edit profile</a></li><hr>
+	<li><a href="{% url 'changepassword' %}"><i class="icofont-bird-wings p-2"></i>change profile</a></li><hr>
+	<li><a href="{% url 'allmovies1' %}"><i class="icofont-ui-image p-2"></i>ALL MOVIES</a></li><hr>
+	<li><a href="{% url 'bookeddetails' %}"><i class="icofont-bird-wings p-2"></i>booked details</a></li><hr>
+
+	
+	<li><a href="{% url 'logout' %}"><i class="icofont-logout p-2"></i>logout</a></li><hr></ul></div>
+	
+	<div class="col-9">
+		
+		{% block content %}
+		{% endblock %}
+	</div></div>
+					
+
+</body>
+</html>

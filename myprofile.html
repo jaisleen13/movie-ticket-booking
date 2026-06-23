@@ -1,0 +1,30 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 bg-info-subtle shadow border p-5 shadow">
+        <h1 class="text-danger p-2"> user profile</h1>
+	<p>
+	user name:- {{user.username}}<br><hr>
+
+	
+
+	
+    date of birth:- {{user.DOB}}<br> <hr>
+
+
+    
+    Father name:- {{user.fathername}}<br><hr>
+     mother name:- {{user.mothername}}<br><hr>
+    last name:- {{user.last_name}}<br><hr>
+    gender:-{{user.gender}}<br><hr>
+    first name:- {{user.first_name}}<br><hr>
+    
+
+
+
+
+</p>
+
+
+{% endblock %}

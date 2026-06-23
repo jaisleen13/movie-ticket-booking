@@ -1,0 +1,242 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+ <div style="background-image: url('https://www.worldpropertyjournal.com/news-assets/Regal%20Dania%20Pointe.jpg'); background-size: cover; ">
+ 	<div class="text-light p-5" style="background-color: rgba(0, 0, 0, 0.09);">
+
+
+
+<form method="POST" action="{%  url 'seats' %}">
+	{% csrf_token %}
+<div class="row" >
+	<h1 class="text-center text-info"><center>Select Seats,date and time</h1></center>
+	<div class="col-3 ">
+		<p>movie name:</p>
+		<input type="text" style="background-color:#aaa;" class="form control" name="moviename" value="{{m_name}}">
+	</div>
+	<div class="col-3">
+		<p>movie id:</p>
+		<input type="text" style="background-color:#aaa;" class="form control" name="movieid" value="{{m_id}}">
+	</div>
+	<div class="col-3">
+		<p>movie date:</p>
+		<input type="date" style="background-color:#aaa;" class="form control" name="moviedate" value="{{m_date}}">
+	</div>
+	<div class="col-3">
+		<p>movie time:</p>
+		<input type="time" style="background-color:#aaa;" class="form control" name="movietime" value="{{m_time}}">
+	</div></div>
+	 <div class="col-md-1"></div>
+	<div class="row">
+	 <div class="col-md-1"></div>
+				<div class="col-md-1"><span onclick="btn_clk('A1')" class="btn btn-danger rounded-0 mt-3">A1</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('A2')" class="btn btn-danger rounded-0 mt-3">A2</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('A3')" class="btn btn-danger rounded-0 mt-3">A3</span></div>
+                <div class="col-md-1"><span onclick="btn_clk('A4')" class="btn btn-danger rounded-0 mt-3">A4</span></div>
+	            <div class="col-md-1"><span onclick="btn_clk('A5')" class="btn btn-danger rounded-0 mt-3">A5</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('A6')" class="btn btn-danger rounded-0 mt-3">A6</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('A7')" class="btn btn-danger rounded-0 mt-3">A7</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('A8')" class="btn btn-danger rounded-0 mt-3">A8</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('A9')" class="btn btn-danger rounded-0 mt-3">A9</span></div>
+		        <div class="col-md-1"><span onclick="btn_clk('A10')" class="btn btn-danger rounded-0 mt-3">A10</span></div></div>
+
+
+	            <div class="col-md-1"></div>
+	             <div class="row">
+	             
+	             <div class="col-md-1"></div>
+				
+				<div class="col-md-1"><span onclick="btn_clk('B1')" class="btn btn-danger rounded-0 mt-3">B1</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('B2')" class="btn btn-danger rounded-0 mt-3">B2</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('B3')" class="btn btn-danger rounded-0 mt-3">B3</span></div>
+                <div class="col-md-1"><span onclick="btn_clk('B4')" class="btn btn-danger rounded-0 mt-3">B4</span></div>
+	            <div class="col-md-1"><span onclick="btn_clk('B5')" class="btn btn-danger rounded-0 mt-3">B5</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('B6')" class="btn btn-danger rounded-0 mt-3">B6</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('B7')" class="btn btn-danger rounded-0 mt-3">B7</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('B8')" class="btn btn-danger rounded-0 mt-3">B8</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('B9')" class="btn btn-danger rounded-0 mt-3">B9</span></div>
+		        <div class="col-md-1"><span onclick="btn_clk('B10')" class="btn btn-danger rounded-0 mt-3">B10</span></div></div>
+		         <div class="col-md-1"></div>
+	             <div class="row">
+	             
+	             <div class="col-md-1"></div>
+				
+				<div class="col-md-1"><span onclick="btn_clk('C1')" class="btn btn-danger rounded-0 mt-3">C1</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('C2')" class="btn btn-danger rounded-0 mt-3">C2</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('C3')" class="btn btn-danger rounded-0 mt-3">C3</span></div>
+                <div class="col-md-1"><span onclick="btn_clk('C4')" class="btn btn-danger rounded-0 mt-3">C4</span></div>
+	            <div class="col-md-1"><span onclick="btn_clk('C5')" class="btn btn-danger rounded-0 mt-3">C5</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('C6')" class="btn btn-danger rounded-0 mt-3">C6</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('C7')" class="btn btn-danger rounded-0 mt-3">C7</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('C8')" class="btn btn-danger rounded-0 mt-3">C8</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('C9')" class="btn btn-danger rounded-0 mt-3">C9</span></div>
+		        <div class="col-md-1"><span onclick="btn_clk('C10')" class="btn btn-danger rounded-0 mt-3">C10</span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+				<div class="col-md-1"></div>
+			
+			
+
+	            <div class="col-md-1"></div>
+
+
+
+	            <div class="row">
+	            
+
+
+				<div class="col-md-1"></div>
+				
+
+				
+				<div class="col-md-1"><span onclick="btn_clk('D1')" class="btn btn-danger rounded-0 mt-3">D1</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('D2')" class="btn btn-danger rounded-0 mt-3">D2</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('D3')" class="btn btn-danger rounded-0 mt-3">D3</span></div>
+                <div class="col-md-1"><span onclick="btn_clk('D4')" class="btn btn-danger rounded-0 mt-3">D4</span></div>
+	            <div class="col-md-1"><span onclick="btn_clk('D5')" class="btn btn-danger rounded-0 mt-3">D5</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('D6')" class="btn btn-danger rounded-0 mt-3">D6</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('D7')" class="btn btn-danger rounded-0 mt-3">D7</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('D8')" class="btn btn-danger rounded-0 mt-3">D8</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('D9')" class="btn btn-danger rounded-0 mt-3">D9</span></div>
+		        <div class="col-md-1"><span onclick="btn_clk('D10')" class="btn btn-danger rounded-0 mt-3">D10</span></div>
+                </div>
+
+
+	            <div class="col-md-1"></div>
+	             <div class="row">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	             <div class="col-md-1"></div>
+				
+				<div class="col-md-1"><span onclick="btn_clk('E1')" class="btn btn-danger rounded-0 mt-3">E1</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('E2')" class="btn btn-danger rounded-0 mt-3">E2</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('E3')" class="btn btn-danger rounded-0 mt-3">E3</span></div>
+                <div class="col-md-1"><span onclick="btn_clk('E4')" class="btn btn-danger rounded-0 mt-3">E4</span></div>
+	            <div class="col-md-1"><span onclick="btn_clk('E5')" class="btn btn-danger rounded-0 mt-3">E5</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('E6')" class="btn btn-danger rounded-0 mt-3">E6</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('E7')" class="btn btn-danger rounded-0 mt-3">E7</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('E8')" class="btn btn-danger rounded-0 mt-3">E8</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('E9')" class="btn btn-danger rounded-0 mt-3">E9</span></div>
+		        <div class="col-md-1"><span onclick="btn_clk('E10')" class="btn btn-danger rounded-0 mt-3">E10</span></div></div>
+
+
+	            <div class="col-md-1"></div>
+	             <div class="row">
+	             
+	             <div class="col-md-1"></div>
+				
+				<div class="col-md-1"><span onclick="btn_clk('F1')" class="btn btn-danger rounded-0 mt-3">F1</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('F2')" class="btn btn-danger rounded-0 mt-3">F2</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('F3')" class="btn btn-danger rounded-0 mt-3">F3</span></div>
+                <div class="col-md-1"><span onclick="btn_clk('F4')" class="btn btn-danger rounded-0 mt-3">F4</span></div>
+	            <div class="col-md-1"><span onclick="btn_clk('F5')" class="btn btn-danger rounded-0 mt-3">F5</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('F6')" class="btn btn-danger rounded-0 mt-3">F6</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('F7')" class="btn btn-danger rounded-0 mt-3">F7</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('F8')" class="btn btn-danger rounded-0 mt-3">F8</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('F9')" class="btn btn-danger rounded-0 mt-3">F9</span></div>
+		        <div class="col-md-1"><span onclick="btn_clk('F10')" class="btn btn-danger rounded-0 mt-3">F10</span></div></div>
+
+
+
+	            <div class="col-md-1"></div>
+	             <div class="row">
+	             	<div class="col-md-1"></div>
+				
+				<div class="col-md-1"><span onclick="btn_clk('G1')" class="btn btn-danger rounded-0 mt-3">G1</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('G2')" class="btn btn-danger rounded-0 mt-3">G2</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('G3')" class="btn btn-danger rounded-0 mt-3">G3</span></div>
+                <div class="col-md-1"><span onclick="btn_clk('G4')" class="btn btn-danger rounded-0 mt-3">G4</span></div>
+	            <div class="col-md-1"><span onclick="btn_clk('G5')" class="btn btn-danger rounded-0 mt-3">G5</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('G6')" class="btn btn-danger rounded-0 mt-3">G6</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('G7')" class="btn btn-danger rounded-0 mt-3">G7</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('G8')" class="btn btn-danger rounded-0 mt-3">G8</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('G9')" class="btn btn-danger rounded-0 mt-3">G9</span></div>
+		        <div class="col-md-1"><span onclick="btn_clk('G10')" class="btn btn-danger rounded-0 mt-3">G10</span></div>
+		    </div>
+
+
+
+	            <div class="col-md-1"></div>
+
+	             <div class="row">
+	             	<div class="col-md-1"></div>
+
+				
+				<div class="col-md-1"><span onclick="btn_clk('H1')" class="btn btn-danger rounded-0 mt-3">H1</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('H2')" class="btn btn-danger rounded-0 mt-3">H2</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('H3')" class="btn btn-danger rounded-0 mt-3">H3</span></div>
+                <div class="col-md-1"><span onclick="btn_clk('H4')" class="btn btn-danger rounded-0 mt-3">H4</span></div>
+	            <div class="col-md-1"><span onclick="btn_clk('H5')" class="btn btn-danger rounded-0 mt-3">H5</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('H6')" class="btn btn-danger rounded-0 mt-3">H6</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('H7')" class="btn btn-danger rounded-0 mt-3">H7</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('H8')" class="btn btn-danger rounded-0 mt-3">H8</span></div>
+				<div class="col-md-1"><span onclick="btn_clk('H9')" class="btn btn-danger rounded-0 mt-3">H9</span></div>
+		        <div class="col-md-1"><span onclick="btn_clk('H10')" class="btn btn-danger rounded-0 mt-3">H10</span></div></div>
+             <div class="row">
+             	<div class="col-2"></div>
+             <div class="col-3">
+				<p>YOUR SEATS:</p>
+				<input type="text" style="background-color:#aaa;" class="form control" id="put_seats"  name="seats" >
+			</div>
+			<div class="col-3">
+				<p>total no of seats:</p>
+				<input type="number" style="background-color:#aaa;" class="form control" id="put_seats_count" name="count"><br>
+			</div>
+             <div class="col-2"><br><br>
+			
+				<button type="submit"  class="form control btn btn-info" name="">Confirm seats</button>
+				<div class="col-2"></div>
+			</div></div>
+
+
+</form></div></div>
+
+
+
+
+
+<script>
+	let c=0
+	function btn_clk(n){
+		// alert("click")
+		c++;
+		data =n.toString()+","
+		console.log(data)
+		document.getElementById('put_seats').value+=data;
+		document.getElementById('put_seats_count').value=c;
+
+	}
+	
+
+
+
+
+
+</script>
+
+
+{% endblock %}
+
+
+
+

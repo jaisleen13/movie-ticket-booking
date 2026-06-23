@@ -1,0 +1,52 @@
+{% include 'header.html' %}
+<div style="background-color:black;">
+
+
+	<div class="row" text-light text-center pt-5 >
+			<div class="col-12">
+			<h1 class="display-1 text-white text-center"><b><i>ALL MOVIES</i></b></h1></div></div></div>
+<div class="row alert alert-warning">
+	<div class="col-4 text-end mt-5"> Select Language</div>
+	<div class="col-3 mt-5">
+		
+
+		<center>
+<form method="POST" action="">
+	{% csrf_token %}
+	<select name="sel" class="form-select">
+			{% for i in Language %}
+
+			
+				<option value="{{i.Language_name}}">{{i.Language_name|title}}</option>
+			
+				
+
+			{% endfor %}
+	
+</select></div>
+<div class="col-1 mt-5">
+			<button type="submit" class="btn btn-primary">Search</button>
+
+			</center>
+			</form>	
+
+	</div>
+	<div class="col-4"></div>
+</div>
+			    <div class="container">
+	<div class="row">
+		{%  for i in data %}
+			<div class="col-4">
+				<div class="card mt-5" style="width:18rem;">
+					
+					<img src="{{i.Photo.url}}" class="card-img-top"alt="" height="250px">
+					<div class="card-body" style="background-color:black; color:white">
+						<h5 class="card-title"></h5>
+						<h3 class="card-text"><b><center>{{i.movie_name|title}}</center></b></h3>
+						<br>
+						<a href="{% url 'login'%}" class="btn text-black form-control" style="background-color: #D96C2C; text-decoration:blink;"><center>book ticket</center></a>
+					</div></div></div>
+{% endfor %}
+</div></div>
+{%  include 'footer.html' %}
+

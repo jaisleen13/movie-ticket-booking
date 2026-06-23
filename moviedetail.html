@@ -1,0 +1,94 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+
+	
+		<div class="row pt-5">
+			<div class="col-4">
+				<img src="{{i.Photo.url}}" height="400px" width="100%">
+			</div>
+
+				<div class="col-7">
+					<table class="table ">
+						<tr>
+							<th scope="row">
+							movie name</th>
+							<td>{{i.movie_name}}</td>
+						</tr>
+						<tr>
+							<th scope="row">
+							Certificate</th>
+							<td>{{i.Certificate}}</td>
+						</tr>
+						<tr>
+							<th scope="row">
+							Movie type</th>
+							<td>{{i.Movie_type}}</td>
+
+						</tr>
+						<tr>
+							<th scope="row">
+							Language</th>
+							<td>{{i.Language}}</td>
+						</tr>
+						<tr>
+							<th scope="row">
+							Duration</th>
+							<td>{{i.Duration}}</td>
+						</tr>
+						<tr>
+							<th scope="row">
+							Release Date</th>
+							<td>{{i.Release_Date}}</td>
+						</tr>
+												<tr>
+							<th scope="row">
+							Cast</th>
+							<td>{{i.Casting}}</td>
+						</tr>
+												<tr>
+							<th scope="row">
+							Director</th>
+							<td>{{i.Director}}</td>
+						</tr>
+						<tr>
+							<th scope="row">
+							Description</th>
+							<td>{{i.Description}}</td>
+						</tr>
+					
+					<th class="bg-secondary text-dark text-center">select date and time<br>
+					</th>
+					<td class='bg-secondary text-light'><br>
+					<form method="POST" action="">
+						{% csrf_token %}
+						<div class="row">
+							<input type="text" name="movie_name" class="form_control"  value="{{ i.movie_name}}" hidden><br>
+							<input type="text" name="movie_id"  class="form_control" value="{{ i.id}}" hidden><br>
+							<div class="col-6">
+								Booking Date:
+								<input type="date" name="date" class="form_control" required>
+							</div>
+							<div class="col-md-6">
+								Booking Time:
+								<select class="form-select" name="time" required>
+									<option value="10:00">10:00 AM</option>
+									<option value="2:00">2:00 PM</option>
+									<option value="4:00">4:00 PM</option>
+									<option value="7:00">7:00 PM</option>
+									<option value="9:00">9:00 PM</option>
+									<option value="11:00">11:00 PM</option>
+									<option value="1:00">1:00 AM</option></select>
+								</div>
+							</div>
+							<button class="btn btn-danger rounded-0 mt-3 " type="submit">Book  Now</button>
+						</form></td></table>
+					
+				</div>
+			</div>
+
+
+
+
+						</div></div>
+			
+{% endblock %}

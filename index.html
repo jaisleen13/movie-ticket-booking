@@ -1,0 +1,250 @@
+{% include 'header.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'icofont/icofont.min.css' %}">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style type="text/css">
+ .col-3 .img1{height: 250px; width: 99%; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%  ; border-top-left-radius: 50%;
+  box-shadow:-10px 10px 5px #CCC }
+</style>
+  
+  
+
+</head>
+<body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
+
+
+
+ 
+
+
+   
+<div class="row">
+      <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://daily.kellogg.edu/wp-content/uploads/2018/08/film-interpretation.jpg"  class="d-block w-100" alt="..." height="600px"; width="1400px";>
+    </div>
+    <div class="carousel-item">
+      <img src="https://png.pngtree.com/background/20230626/original/pngtree-movie-night-essentials-bucket-of-popcorn-filmstrip-clapper-board-and-camera-picture-image_4057307.jpg
+"  class="d-block w-100" alt="..." height="700px"; width="1500px";>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.etsystatic.com/34325087/r/il/197584/5874179223/il_fullxfull.5874179223_98z9.jpg" 
+
+ class="d-block w-100" alt="..." height="700px"; width="1500px";>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></div>
+
+
+<!--  -->
+<div class="container pt-5 pn-5">
+<div class="row "><h1  data-aos="flip-left" class="text-center text-bold text-primary ">TRAILER OF MOVIES</h1>
+    <p class="text-center">a short showing of a future movie or  a commercial advertisement</p>  
+  <br><br>
+  
+  <div class="col-6">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KVnheXywIbY?si=OfZnxCpDl8jcYZ3T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="col-6">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/iaxDEiLCeW0?si=J0xLCqxgz6IfUUHJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+ 
+    </div>
+</div>
+<center><a href="{% url 'trailer' %}" class="btn btn-primary rounded-0 btn-lg"> view All trailers</a></center>
+    
+  
+
+  </div></div><hr>
+
+
+  <!--  -->
+
+<div class="container-fluid bg-warning-subtle">
+<div class="container p-5">
+  <div data-aos="fade-up" 
+     data-aos-duration="3000" class="row "><h1 data-aos="zoom-in" class=" pb-5 text-center text-bold text-primary">MOVIES JULY 2024</h1><br>
+    <div class="col-3">
+     <img src='{% static "qr_codes/bad.jpg" %}' height="250px" width="250px" style="">
+     <a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0" >   Book Now  </a><br><br>
+     <img src='{% static "qr_codes/kal.webp" %}' height="250px" width="250px" style="">
+     <a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0">   Book Now  </a><br><br>
+  </div>
+ 
+  <div class="col-3">
+     <img src='{% static "qr_codes/jat.jpg" %}' height="250px" width="250px" style="">
+     <a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0">   Book Now  </a><br><br>
+     <img src='{% static "qr_codes/sar.jpg" %}' height="250px" width="250px">
+    <a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0">   Book Now  </a><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/inn.jpg" %}' height="250px" width="250px">
+     <a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0">   Book Now  </a><br><br>
+     <img  data-aos="zoom-out" src='{% static "qr_codes/kill.avif" %}' height="250px" width="250px">
+     <a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0">   Book Now  </a><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/maha.avif"" %}' height="250px" width="250px">
+     <a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0">   Book Now  </a><br><br>
+     <img src='{% static "qr_codes/dea.jpg"" %}' height="250px" width="250px">
+    <a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0">   Book Now  </a><br><br>
+  </div></div>
+</div></div>
+
+
+<div class="container-fluid bg-black p-5">
+  <div class="container">
+  <div data-aos="zoom-in-up" class="row ">
+    <h1  data-aos="zoom-in-up" class=" text-center text-bold text-primary text-danger pb-5">Top Trending Movies 2024</h1><br>
+  <div class="col-3">
+     <img  data-aos="zoom-out" src='{% static "qr_codes/nii.jpeg"" %}' class="img1" ><br><br>
+     <img src='{% static "qr_codes/samm.webp"" %}' class="img1"><br><br>
+  </div>
+  <div class="col-3">
+     
+     <img src='{% static "qr_codes/gad.avif" %}' class="img1"><br><br>
+     <img  data-aos="zoom-out" src='{% static "qr_codes/cre.jpg" %}' class="img1"><br><br>
+  </div>
+  <div class="col-3">
+     <img data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" src='{% static "qr_codes/kalki.jpg" %}' class="img1"><br><br>
+     <img src='{% static "qr_codes/crew.gif" %}' class="img1"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/maha.avif" %}' class="img1"><br><br>
+     <img data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" src='{% static "qr_codes/war.avif" %}' class="img1"><br><br>
+  </div></div>
+</div>
+</div>
+<div class="container-fluid bg-info-subtle p-5">
+      <div class="container p-2">
+
+
+
+
+  <div class="row">
+    
+    <h1 data-aos="flip-down" class="text-center text-bold text-primary">Book your Snacks</h1>
+  <div class="col-3">
+     <img src='{% static "qr_codes/did.jpg" %}' height="250px" width="250px"><br><br>
+     <img src='{% static "qr_codes/fri.jpeg" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" src='{% static "qr_codes/san.jpg" %}' height="250px" width="250px"><br><br>
+     <img data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" src='{% static "qr_codes/cok.jpg" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/bur.jpg" %}' height="250px" width="250px"><br><br>
+     <img src='{% static "qr_codes/piz.jpg" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/pot.jpg" %}' height="250px" width="250px"><br><br>
+     <img src='{% static "qr_codes/pop.jpg" %}' height="250px" width="250px"><br><br>
+  </div></div>
+<a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0" >   Book Now  </a><br><br></div></div>
+
+
+
+<div class="container-fluid bg-warning-subtle p-5">
+      <div class="container pb-2">
+
+
+   
+
+  <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="row ">
+    <h1  data-aos="flip-down" class="text-center text-bold text-primary text-danger pb-3">A look of cinema house</h1><br><br>
+    <p class="text-center"> a business that contains auditoria for viewing films  for public entertainment</p>
+  <div class="col-3">
+     <img src='{% static "qr_codes/cin4.jpg" %}' height="250px" width="250px"><br><br>
+     <img src='{% static "qr_codes/cin1.webp" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/cin2.webp" %}' height="250px" width="250px"><br><br>
+     <img src='{% static "qr_codes/cin3.webp" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/cin5.avif" %}' height="250px" width="250px"><br><br>
+     <img src='{% static "qr_codes/cin6.webp" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/cin7.jpg" %}' height="250px" width="250px"><br><br>
+     <img src='{% static "qr_codes/cin8.jpg" %}' height="250px" width="250px"><br><br>
+  </div></div>
+  <br><a href="{% url 'allmovies' %}" class="btn btn-primary rounded-0" >   Book tickets  </a><br><br></div></div>
+
+
+
+<div class="container-fluid bg-primary-subtle p-5">
+    <div class="container p-2">
+<div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="row">
+      
+    <h1 data-aos="flip-down" class="text-center text-bold text-primary">Behind The Scene</h1>
+     <p class="text-center">what happens during the making of a film, play, or radio or television programme</p>  
+  <br><br>
+
+  <div class="col-3">
+    <img src='{% static "qr_codes/shoo3.jpg" %}' height="250px" width="250px"><br><br>
+     <img src='{% static "qr_codes/shoo4.jpg" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/shoo8.jpg" %}' height="250px" width="250px"><br><br>
+      <img src='{% static "qr_codes/shoo2.jpg" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/shoo9.webp" %}' height="250px" width="250px"><br><br>
+      <img src='{% static "qr_codes/shoo7.avif" %}' height="250px" width="250px"><br><br>
+  </div>
+  <div class="col-3">
+     <img src='{% static "qr_codes/shoo1.avif" %}' height="250px" width="250px"><br><br>
+      <img src='{% static "qr_codes/shoo6.avif" %}' height="250px" width="250px"><br><br>
+  </div></div></div></div>
+       
+       
+       
+       
+       
+
+
+       
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+{% include 'footer.html' %}
+
+</body>
+</html>

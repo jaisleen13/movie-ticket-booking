@@ -1,0 +1,73 @@
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
+</head>
+<body><div style="background-color: black;">
+	<div class="container">
+
+	<div class="row text-white">
+		<div class="col-2"></div>
+		<div class="col-8">
+			<h2>FIND  US</h2><hr>
+			<p>this is my location</p></div>
+
+</div>
+<div class="col-2"></div>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27169.858075473523!2d74.8401839460527!3d31.65486484573813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39196493fdde71ef%3A0x5a89f3cec3595534!2sRanjit%20Avenue%2C%20Amritsar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1718613505549!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<div class="row">
+	<div class="col-1"></div>
+	<div class="col-5 " >
+		<div style="background-image: url('https://thethemedemo.com/ftage/wp-content/uploads/2018/08/contact.png.webp'); background-size: cover;  ">
+				<div class="p-5" style="background-color: rgba(255, 153, 0, 0.75);">
+
+		
+		<h1 class=" text-center" ><u>get in touch</u></h1><br><br>
+		<form class="text-warning" method="post"   action="">
+			{% csrf_token %}
+			<input type="text" class="form-control" name="nm"  placeholder="name*" required><br>
+		    <input type="email" class="form-control" name="em" placeholder="email*" required><br>
+		    
+		    
+		    
+		      
+		    <textarea class="form-control bg-body-secacdary" name="msg" rows="5"> your message</textarea>
+		    
+		    
+		    <button type="submit" class="btn btn-secondary">submit</button>
+		</form></div></div></div>
+		<div class="col-1"></div>
+		<div class="col-4 border-light shadow "><br>
+			<h4 class="text-center">OUR CONTACT DETAILS</h4><br>
+
+			<i class="icofont-ui-contact-list icofont-3x   p-3"></i> 
+			+91 7888501206
+			+91 9877439905
+		<br><hr>
+
+
+			
+			<i class="icofont-location-pin p-3 icofont-3x "></i><span>43,house 23,tarn taran road,amritsar,punjab</span><br><br><hr>
+			
+			<i class="icofont-ui-file icofont-3x p-3"></i>jaisleenk90@gmail.com<br><br><hr>
+			<h1>FOLLOW US</h1>			
+			<i class="icofont-facebook border p-2 bg-warning rounded-circle p-2"></i>
+			<i class="icofont-whatsapp border p-2 bg-warning rounded-circle p-2"></i>
+			<i class="icofont-twitter border p-2 bg-warning rounded-circle p-2"></i>
+			<i class="icofont-instagram border p-2 bg-warning rounded-circle p-2"></i>
+			
+		</div>
+			<div class="col-1">
+			</div>
+		</div> 
+
+
+{% include 'footer.html' %}
+</body>
+</html>
